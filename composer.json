@@ -1,0 +1,20 @@
+{
+    "name": "ham0mer/afdian",
+    "description": "爱发电，查询订单和赞助者信息",
+    "type": "library",
+    "require": {
+        "php": ">=7.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ham0mer\\Afdian\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ham0mer"
+        }
+    ],
+    "minimum-stability": "dev"
+}
