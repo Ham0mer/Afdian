@@ -1,7 +1,7 @@
 <?php
-namespace Ham0er\Afdian;
+namespace Ham0mer\Afdian;
 
-class AfdianHttpResponse
+class HttpResponse
 {
 
     public function __construct($status, $headers, $data)
