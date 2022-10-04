@@ -1,6 +1,6 @@
 <?php
-namespace Ham0er\Afdian;
-class AfdianHttpRequest
+namespace Ham0mer\Afdian;
+class HttpRequest
 {
 
     public function query($url, $postData = [], $cookie = '', $headers = false)
@@ -46,6 +46,6 @@ class AfdianHttpRequest
             $httpCode = curl_error($curl);
         }
         curl_close($curl);
-        return new AfdianHttpResponse($httpCode, $rHeaders, $data);
+        return new HttpResponse($httpCode, $rHeaders, $data);
     }
 }
