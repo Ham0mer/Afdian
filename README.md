@@ -1,13 +1,13 @@
 # Afdian
-## 可以用于查询爱发电的订单和赞助者信息
-
+## 可以用于查询爱发电的订单和赞助者信息与爱发电第三方登录
+第三方登录我没申请下来，没测试等测试在更新
 ### 安装
 
 ~~~bash
 composer require ham0mer/afdian
 ~~~
 
-### 使用方法
+### 订单使用方法
 
 ~~~php
 use \Ham0mer\Afdian\Afdian;
@@ -40,6 +40,22 @@ print_r($sponsors);
 $user = $afdian->getSponsorByName($sponsors, "Lain音酱");
 print_r($user);
 ```
+
+### 登录使用方法
+```php
+use \Ham0mer\Afdian\Login;
+// 初始化 Login 对象
+$client_id = "这里填写你的 Client ID";
+$client_secret = "这里填写你的 Client Secret";
+$siteurl = "这里填写你的网站地址";
+$type = "tp"; // 填tp为ThinkPHP，填other为其他框架
+$login = new Login($client_id,$client_secret,$siteurl,$type);
+
+$login->login();
+//返回信息
+$login->callback($code,$state);
+```
+
 另外也可以直接查看 afdian.php，每个方法都写了详细的注释。
 
 ## Server Return
